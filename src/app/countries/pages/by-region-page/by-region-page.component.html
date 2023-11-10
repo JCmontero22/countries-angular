@@ -1,1 +1,13 @@
-<p>by-region-page works!</p>
+<h2>Por region</h2>
+<hr>
+<div class="row">
+    <div class="col">
+        <app-shearch-box placeHolder="Buscar por region" (onValue)="searchByRegion($event)"></app-shearch-box>
+    </div>
+</div>
+<hr>
+<div class="row">
+    <div class="col">
+        <app-contry-table [countries]="countris"></app-contry-table>
+    </div>
+</div>

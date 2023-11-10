@@ -5,6 +5,8 @@ import { ByCountryPageComponent } from './pages/by-country-page/by-country-page.
 import { ByRegionPageComponent } from './pages/by-region-page/by-region-page.component';
 import { CountryPageComponent } from './pages/country-page/country-page.component';
 import { CoutriesRoutingModule } from './countries-routing.module';
+import { SharedModule } from '../shared/shared.module';
+import { ContryTableComponent } from './components/contry-table/contry-table.component';
 
 
 
@@ -13,11 +15,14 @@ import { CoutriesRoutingModule } from './countries-routing.module';
     ByCapitalPageComponent,
     ByCountryPageComponent,
     ByRegionPageComponent,
-    CountryPageComponent
+    CountryPageComponent,
+    ContryTableComponent,
+
   ],
   imports: [
     CommonModule,
-    CoutriesRoutingModule
+    CoutriesRoutingModule,
+    SharedModule
   ]
 })
 export class CountriesModule { }

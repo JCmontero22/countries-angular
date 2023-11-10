@@ -1,1 +1,13 @@
-<p>by-country-page works!</p>
+<h2>Por pais</h2>
+<hr>
+<div class="row">
+    <div class="col">
+        <app-shearch-box placeHolder="Buscar por pais" (onValue)="searchByCountry($event)"></app-shearch-box>
+    </div>
+</div>
+<hr>
+<div class="row">
+    <div class="col">
+        <app-contry-table [countries]="conuntries"></app-contry-table>
+    </div>
+</div>

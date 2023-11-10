@@ -1,1 +1,16 @@
-<p>by-capital-page works!</p>
+<h2>Por capital</h2>
+<hr>
+
+<div class="row">
+    <div class="col">
+        <app-shearch-box placeHolder="Buscar por capital" (onValue)="searchByCapital($event)"></app-shearch-box>
+    </div>
+</div>
+
+<hr>
+
+<div class="row">
+  <div class="col">
+      <app-contry-table [countries]="countries"></app-contry-table>
+  </div>
+</div>
