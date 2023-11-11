@@ -2,7 +2,7 @@
 <hr>
 <div class="row">
     <div class="col">
-        <app-shearch-box placeHolder="Buscar por pais" (onValue)="searchByCountry($event)"></app-shearch-box>
+        <app-shearch-box placeHolder="Buscar por pais" (onDebounce)="searchByCountry($event)" [initialValue]="initialValue"></app-shearch-box> <!-- (onValue)="searchByCountry($event)"  -->
     </div>
 </div>
 <hr>

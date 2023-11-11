@@ -6,6 +6,7 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { RouterModule } from '@angular/router';
 import { ContactPageComponent } from './pages/contact-page/contact-page.component';
 import { ShearchBoxComponent } from './components/shearch-box/shearch-box.component';
+import { LoadingSpinnerComponent } from './components/loading-spinner/loading-spinner.component';
 
 
 
@@ -17,6 +18,7 @@ import { ShearchBoxComponent } from './components/shearch-box/shearch-box.compon
     SidebarComponent,
     ContactPageComponent,
     ShearchBoxComponent,
+    LoadingSpinnerComponent,
   ],
   imports: [
     CommonModule,
@@ -27,7 +29,8 @@ import { ShearchBoxComponent } from './components/shearch-box/shearch-box.compon
     AboutPageComponent,
     SidebarComponent,
     ContactPageComponent,
-    ShearchBoxComponent
+    ShearchBoxComponent,
+    LoadingSpinnerComponent
   ]
 })
 export class SharedModule { }

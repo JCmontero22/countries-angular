@@ -1,13 +1,20 @@
 <h2>Por region</h2>
 <hr>
 <div class="row">
-    <div class="col">
-        <app-shearch-box placeHolder="Buscar por region" (onValue)="searchByRegion($event)"></app-shearch-box>
+    <!-- <div class="col">
+        <app-shearch-box placeHolder="Buscar por region" (onDebounce)="searchByRegion($event)"></app-shearch-box>  ///(onValue)="searchByRegion($event)"
+    </div> -->
+
+    <div class="col text-center">
+      <button *ngFor="let item of reqions" class="btn" [ngClass]="{'btn-outline-primary': selectionRegion == item}" (click)="searchByRegion(item)">
+          {{ item }}
+      </button>
     </div>
 </div>
 <hr>
 <div class="row">
     <div class="col">
+        <app-loading-spinner *ngIf="isloading == true"></app-loading-spinner>
         <app-contry-table [countries]="countris"></app-contry-table>
     </div>
 </div>

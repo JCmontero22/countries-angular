@@ -3,7 +3,7 @@
 
 <div class="row">
     <div class="col">
-        <app-shearch-box placeHolder="Buscar por capital" (onValue)="searchByCapital($event)"></app-shearch-box>
+        <app-shearch-box placeHolder="Buscar por capital" (onDebounce)="searchByCapital($event)" [initialValue]="initialValue"></app-shearch-box> <!-- (onValue)="searchByCapital($event)" -->
     </div>
 </div>
 
@@ -11,6 +11,7 @@
 
 <div class="row">
   <div class="col">
+      <app-loading-spinner *ngIf="isLoading == true"></app-loading-spinner>
       <app-contry-table [countries]="countries"></app-contry-table>
   </div>
 </div>
